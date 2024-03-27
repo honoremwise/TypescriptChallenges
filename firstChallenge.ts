@@ -1,18 +1,18 @@
 // Define the User interface
-function User(name, age, occupation) {
-    this.name = name;
-    this.age = age;
-    this.occupation = occupation;
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
 }
 
 // Array of users
-const users = [
-    new User('Max Mustermann', 25, 'Chimney sweep'),
-    new User('Kate Müller', 23, 'Astronaut')
+const users: User[] = [
+    { name: 'Max Mustermann', age: 25, occupation: 'Chimney sweep' },
+    { name: 'Kate Müller', age: 23, occupation: 'Astronaut' }
 ];
 
 // Function to log a user's information
-function logPerson(user) {
+function logPerson(user: User) {
     console.log(` - ${user.name}, ${user.age}`);
 }
 
